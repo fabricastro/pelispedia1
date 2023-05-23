@@ -6,9 +6,12 @@
         <label for="filtroAnio">Filtrar por año:</label>
         <select class="form-control" name="filtroAnio" [(ngModel)]="filtroAnio">
           <option value="">Todos</option>
-          <option *ngFor="let pelicula of peliculas" [value]="pelicula.date">{{ pelicula.date }}</option>
+          <option value="2015">2015</option>
+          <option value="2019">2019</option>
+          <option value="2020">2020</option>
+          <option value="2022">2022</option>
         </select>
-        <button class="btn btn-primary" (click)="aplicarFiltro()">Aplicar</button>
+        <button class="btn btn-dark mt-2" (click)="aplicarFiltro()">Aplicar</button>
       </div>
     </div>
     <div class="col">
@@ -16,9 +19,12 @@
         <label for="filtroGenero">Filtrar por genero:</label>
         <select class="form-control" name="filtroGenero" [(ngModel)]="filtroGenero">
           <option value="">Todos</option>
-          <option *ngFor="let pelicula of peliculas" [value]="pelicula.genero">{{ pelicula.genero }}</option>
+          <option value="Drama">Drama</option>
+          <option value="Infantil">Infantil</option>
+          <option value="Accion">Accion</option>
+          <option value="Ficcion">Ficción</option>
         </select>
-        <button class="btn btn-primary" (click)="aplicarFiltro()">Aplicar</button>
+        <button class="btn btn-dark mt-2" (click)="aplicarFiltro()">Aplicar</button>
       </div>
     </div>
     <div class="col">
@@ -26,9 +32,11 @@
         <label for="filtroTipo">Filtrar por tipo:</label>
         <select class="form-control" name="filtroTipo" [(ngModel)]="filtroTipo">
           <option value="">Todos</option>
-          <option *ngFor="let pelicula of peliculas" [value]="pelicula.tipo">{{ pelicula.tipo }}</option>
+          <option value="Pelicula">Película</option>
+          <option value="Serie">Serie</option>
+          <option value="Documental">Documental</option>
         </select>
-        <button class="btn btn-primary" (click)="aplicarFiltro()">Aplicar</button>
+        <button class="btn btn-dark mt-2" (click)="aplicarFiltro()">Aplicar</button>
       </div>
     </div>
   </div>

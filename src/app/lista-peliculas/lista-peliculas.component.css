@@ -41,3 +41,15 @@
   font-size: 14px;
   color: #666;
 }
+
+/* Estilos para el mensaje de no coincidencias */
+.no-coincidencias {
+  font-size: 18px;
+  color: #333;
+  text-align: center;
+  padding: 20px;
+  background-color: #f7f7f7;
+  border-radius: 4px;
+  margin-bottom: 20px;
+}
+
