@@ -6,10 +6,17 @@
         <label for="filtroAnio">Filtrar por año:</label>
         <select class="form-control" name="filtroAnio" [(ngModel)]="filtroAnio">
           <option value="">Todos</option>
-          <option value="2015">2015</option>
-          <option value="2019">2019</option>
-          <option value="2020">2020</option>
-          <option value="2022">2022</option>
+          <option value="1972">1972</option>
+            <option value="1994">1994</option>
+            <option value="1999">1999</option>
+            <option value="2008">2008</option>
+            <option value="2010">2010</option>
+            <option value="2011">2011</option>
+            <option value="2014">2014</option>
+            <option value="2016">2016</option>
+            <option value="2020">2020</option>
+            <option value="2022">2022</option>
+            <option value="2023">2023</option>
         </select>
         <button class="btn btn-dark mt-2" (click)="aplicarFiltro()">Aplicar</button>
       </div>
@@ -22,7 +29,8 @@
           <option value="Drama">Drama</option>
           <option value="Infantil">Infantil</option>
           <option value="Accion">Accion</option>
-          <option value="Ficcion">Ficción</option>
+          <option value="Ciencia ficcion">Ciencia Ficción</option>
+          <option value="Comedia">Comedia</option>
         </select>
         <button class="btn btn-dark mt-2" (click)="aplicarFiltro()">Aplicar</button>
       </div>
@@ -43,7 +51,9 @@
 
    <div class="row justify-content-center pt-4">
     <div *ngIf="peliculasFiltradas.length === 0" class="col-12 text-center">
-      <p>No se encontraron coincidencias.</p>
+      <div class="alert alert-custom animated fadeIn" role="alert">
+        <p class="mb-0">No se encontraron coincidencias.</p>
+      </div>
     </div>
     <div class="card col-3 card-content" *ngFor="let pelicula of peliculasFiltradas">
       <img class="img-fluid" src="{{ pelicula.imagen }}" alt="Imagen de la película">

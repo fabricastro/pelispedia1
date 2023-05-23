@@ -53,3 +53,8 @@
   margin-bottom: 20px;
 }
 
+.alert-custom {
+  background-color: #ffc107; /* Color de fondo personalizado */
+  color: #fff; /* Color de texto personalizado */
+}
+
